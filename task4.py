@@ -1,0 +1,11 @@
+s = "Бойцовский клуб Python"
+print(s.strip())
+print(s.upper())
+print(s.lower())
+print(s.count("й"))
+print(s.split())
+print(s.replace(" ", "-"))
+print(s.replace("клуб", "club"))
+print(s.find("Python"))
+print(s.startswith("Бой"))
+print(len(s), len(s.strip()))
