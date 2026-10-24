@@ -1,11 +1,22 @@
-s = "Бойцовский клуб"
-print(s[0]) #1
-print(s[-1]) #2
-print(s[0:3]) #3
-print(s[11:15], s[-4:]) #4
-print(s[0:15:2]) #5
-print(s[::-1]) #6
-print(s[0:10]) #7
-print(len(s)) #8
-print("клуб" in s) #9
-print(f"{s[0:3]} {s[-4:]}") #10
+digits = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+print(digits[-1:-3:-1])
+print(digits[5], digits[-4])
+print(digits[2:6:1])
+print(digits[::2])
+print(digits[::-1])
+print(digits.count(1), digits.count(5))
+print(max(digits), min(digits), sum(digits))
+print(digits.index(5))
+print(len(digits)- 1 - digits[::-1].index(5))
+indeces = []
+for index, value in enumerate(digits):
+    if value == 5:
+        indeces.append(index)
+print(indeces)
+if 7 in digits:
+    print(digits.index(7))
+else:
+    print("7 не найдено")
+new_list = [0 if x == 5 else x for x in digits]
+print(new_list)
+print(digits)
