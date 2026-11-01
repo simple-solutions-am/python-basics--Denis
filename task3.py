@@ -1,24 +1,31 @@
-#1
-x = int(input())
-y = int(input())
-print(f"{x+y},{x-y},{x*y},{x/y},{x//y},{x%y},{x**y}") 
-#2
-s = int(input())
-print(s%10)
-#3
-z = int(input())
-z1 = z//100
-z2 = (z//100) % 10
-z3 = z % 10
-print(z1 + z2 + z3)
-#4
-c = int(input())
-f = c * 9 / 5 + 32
-print(f"{f:.1f}")
-#5
-a = int(input())
-b = int(input())
-print(a > b, a < b, a == b, a != b, a >= b )
-#6
-n = float(input())
-print(f"{n ** 0.5:.3f}")
+s = "Python - лучший язык. Учу Python каждый день!"
+
+print("Python" in s, "python" in s)
+
+index_1 = s.find("Python")
+index_2 = s.find("Python", index_1 + 1)
+print(index_1, index_2)
+
+find_java = s.find("Java")
+print(find_java)
+
+python_count = s.count("Python")
+print(python_count)
+
+print(s.replace("Python", "Питон"))
+
+print(s.replace("Python", "Питон", 1))
+
+a = "Клуб"
+b = "клуб"
+print(a == b, a.lower() == b.lower(), "кит" < "кот")
+
+phrase = "А роза упала на лапу Азора"
+phrase_new = phrase.lower().replace(" ", "")
+print(phrase_new)
+
+print(phrase_new == phrase_new[::-1])
+
+hi = "Привет мир"
+hi_new = hi.lower().replace(" ", "")
+print(hi_new == hi_new[::-1])
