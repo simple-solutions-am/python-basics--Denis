@@ -14,7 +14,7 @@ users = set()
 for user, track in requests:
     users.add(user)
 
-print(f"Кто писал: {user}")
+print(f"Кто писал: {sorted(users)}")
 
 count = {}
 for user, track in requests:
@@ -26,7 +26,7 @@ print(count["Финал"])
 print(count.get("Космос", 0))
 
 print("\n5 Перебор словаря:")
-for trak, n in count.items():
+for track, n in count.items():
     print(f"{track}: {'🔥' * n}")
 
 best_track = None
@@ -37,7 +37,7 @@ for track, num in count.items():
         max_requests = num
         best_track = track
 
-print(f"\n Хит вечера:\nХит вечера: {best_track} ({max_requests})")   
+print(f"\nХит вечера: {best_track} ({max_requests})")
 
 by_user = {}
 for user, track in requests:
@@ -49,9 +49,9 @@ print(f"\n Треки max по алфавиту:\n{sorted(by_user['max'])}")
 
 lena = by_user["lena"]
 kira = by_user["kira"]
-max = by_user["max"]
+max_ = by_user["max"]
 print("\n8 Похожие вкусы:")
-print(f"1) {sorted(lena & max)}")
-print(f"2) {sorted(max - lena)}")
-print(f"3) {sorted(lena | max)}")
+print(f"1) {sorted(lena & max_)}")
+print(f"2) {sorted(max_ - lena)}")
+print(f"3) {sorted(lena | max_)}")
 print(f"4) {lena == kira}")
