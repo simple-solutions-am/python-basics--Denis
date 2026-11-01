@@ -18,17 +18,24 @@ for cmd in commands:
         name = cmd[1]
         phone = cmd[2]
         book[name] = phone
-        print(f"Сохранил:{name}")
+        print(f"Сохранил: {name}")
 
     elif action == "find":
         name = cmd[1]
         if name in book:
-            del book[name]
-            print(f"Удалил {name}")
+            print(f"{name}: {book[name]}")
         else:
-            print("Контак не найден.")
+            print(f"{name}: такого контакта нет")
+
+    elif action == "del":
+        name = cmd[1]
+        if name in book:
+            del book[name]
+            print(f"Удалил: {name}")
+        else:
+            print(f"{name}: такого контакта нет")
 
     elif action == "list":
-        print(f"Контактов:{len(book)}")
+        print(f"Контактов: {len(book)}")
         for name, phone in book.items():
             print(f"{name}: {phone}")

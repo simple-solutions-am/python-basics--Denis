@@ -25,5 +25,7 @@ for word, count in counter.items():
         max_count = count
         most_word = word
 
-print(repeated_words)
-print(f"Самое частое: {most_word}")
+for word, count in repeated_words.items():
+    print(f"{word}: {count}")
+
+print(f"Самое частое: {most_word} ({max_count})")
